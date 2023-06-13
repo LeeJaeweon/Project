@@ -1,39 +1,43 @@
 package user;
 
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
 public class User {
-
-	public static void main(String[] args) {
-		Connection conn=null; //DB 커넥션 연결 객체
-		String USERNAME = "root";//DBMS접속 시 아이디
-		String PASSWORD = "Jaeweon7018";//DBMS접속 시 비밀번호
-		String URL = "jdbc:mysql://localhost:3306/BBS";//DBMS접속할 db명
-		
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-			System.out.println("연결 완료");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
-			conn.close();
-			System.out.println("연결 해제");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	
+	private String userID;
+	private String userPassword;
+	private String userName;
+	private String userGender;
+	private String userEmail;
+	
+	public String getUserID() {
+		return userID;
 	}
-
+	public void setUserID(String userID) {
+		this.userID = userID;
+	}
+	public String getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getUserGender() {
+		return userGender;
+	}
+	public void setUserGender(String userGender) {
+		this.userGender = userGender;
+	}
+	public String getUserEmail() {
+		return userEmail;
+	}
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+	
+	
 }
