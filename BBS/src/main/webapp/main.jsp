@@ -71,29 +71,29 @@
 		<div class="jumbotron">
 			<div class="container">
 				<h1>	테스트 테스트	</h1>
-				<h2>	2테스틋2	</h2>
-				<p> 이 웹사이트 머시기 머시기 응애 </p>
+				<h2>	2테슷트2	</h2>
+				<p> 이 웹사이트 머시기 머시기  </p>
 				<a class="btn btn-primary btn-pull"  href="#	" role="button"> 자세히 알아보기 </a>
 			</div>
 		</div>
 	</div>
 	<!--  메인페이지 사진 삽입 영역  -->	
 	<div class="container"> 
-		<div id="myCarousel" class="caraousel slide" data-ride="carousel">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
-				<li data-target="myCarousel" data-slide-to="1" class="active"></li>
-				<li data-target="myCarousel" data-slide-to="2"></li>
-				<li data-target="myCarousel" data-slide-to="3"></li>		
+				<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>		
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
-					<img src="images/1.jpg">
+					<img src="images/1.jpg" height="600" width="1200">
 				</div>
 				<div class="item">
-					<img src="images/2.jpg">
+					<img src="images/2.jpg" height="600" width="1200">
 				</div>
 				<div class="item">
-					<img src="images/다운로드.jpg">
+					<img src="images/3.jpg" height="600" width="1200">
 				</div>
 			</div>
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
