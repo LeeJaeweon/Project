@@ -14,17 +14,20 @@
 </head>
 <body>
 <%
+	// 메인 페이지로 이동했을 때 세션에 값이 담기는지 체크
     String userID = null; // 로그인이 된 사람들은 로그인정보를 담을 수 있도록한다
     if (session.getAttribute("userID") != null)
     {
         userID = (String)session.getAttribute("userID");
     }
+    // bbsID를 초기화 시키고
+    // 'bbsID' 라는 데이터가 넘어온 것이 존재한다면 캐스팅을 하여 변수에 담는다.
     int bbsID = 0;
     if (request.getParameter("bbsID") != null)
     {
         bbsID = Integer.parseInt(request.getParameter("bbsID"));
     }
-    if (bbsID == 0)
+    if (bbsID == 0)		// 만약 넘어온 데이터가 없다면
     {
         PrintWriter script = response.getWriter();
         script.println("<script>");
