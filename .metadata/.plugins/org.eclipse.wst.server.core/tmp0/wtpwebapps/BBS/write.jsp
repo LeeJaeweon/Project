@@ -85,6 +85,7 @@
     	    		</tbody>
     		    </table>
     	   		<input type="submit" href= "write.jsp" class= "btn btn-primary pull-right" value="게시글 작성">
+    	   		<input type="submit" href= "write.jsp" class= "btn btn-primary pull-right" value="업로드 파일 선택">
     		</form>
     	</div>
     </div>

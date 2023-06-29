@@ -3,12 +3,11 @@
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.io.*" %>
-<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %> <!-- 파일이름 중복을 피할 수 있도록 -->
 
 <%
 	String realFolder = "";
 
-	String saveFolder = "images"; // out폴더에 fileSave 폴더 생성
+	String saveFolder = "fileSave"; // out폴더에 fileSave 폴더 생성
 	String encType = "utf-8";
 	int maxSize = 5*1024*1024; // 최대 업로드 5mb
 
@@ -41,13 +40,13 @@
 	        File file = multi.getFile(name);
 
 
-	        out.println(" paramname " +": " + name + "<br>");
-	        out.println(" filename " +" : "+ original + "<br>");
-	        out.println(" Savename " +" : "+ filename + "<br>");
-	        out.println(" filetype " +" : " + type + "<br>");
+	        out.println("파라미터 이름" + name + "<br>");
+	        out.println("실제 파일 이름" + original + "<br>");
+	        out.println("저장된 파일 이름" + filename + "<br>");
+	        out.println("파일 타입 이름" + type + "<br>");
 
 		    if(file!= null) {
-		        out.println("크기 : " + file.length() + "byte" + "<br>");
+		        out.println("크기: " + file.length() + "<br>");
 		    }
 	    }
 
