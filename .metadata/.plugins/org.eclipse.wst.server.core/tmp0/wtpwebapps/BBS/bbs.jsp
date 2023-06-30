@@ -70,6 +70,7 @@
                     aria-haspopup="true"
                     aria-expanded="false">회원관리<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="profileUpdate.jsp">프로필 수정</a></li>
                         <li><a href="logoutAction.jsp">로그아웃</a></li>
                     </ul>
                 </li>

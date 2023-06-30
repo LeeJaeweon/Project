@@ -56,6 +56,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">회원관리<span class="caret"></span></a>
 					<ul class="dropdown-menu">
+                        <li><a href="profileUpdate.jsp">프로필 수정</a></li>
 						<li><a href="logoutAction.jsp">로그아웃</a></li>
 					</ul>
 				</li>
@@ -71,7 +72,7 @@
 		<div class="jumbotron">
 			<div class="container">
 				<h1>	My Web	</h1>
-				<p> 환영합니다  </p>
+				<p> ㅎ2  </p>
 				<a class="btn btn-primary btn-pull"  href="#	" role="button"> 자세히 알아보기 </a>
 			</div>
 		</div>

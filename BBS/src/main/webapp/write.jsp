@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
+<!--  파일 업로드 추가 page import -->
+<%@ page import="file.FileDAO" %>
+<%@ page import="java.io.File" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
+<%@ page import="com.oreilly.servlet.MultipartRequest" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -57,6 +62,7 @@
                     aria-haspopup="true"
                     aria-expanded="false">회원관리<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="profileUpdate.jsp">프로필 수정</a></li>
                         <li><a href="logoutAction.jsp">로그아웃</a></li>
                     </ul>
                 </li>
@@ -68,7 +74,7 @@
     </nav>
     <div class= "container">
     	<div= "row">
-    		<form method="post" action="writeAction.jsp">
+    		<form name="form" method="post" action="writeAction.jsp" encType="multipart/form-data&keyvalue=multipart">
     	 	   <table class= "table table-striped" style= "text-align: center; border: 1px solid #dddddd">
     	    		<thead>
     	    			<tr>
@@ -82,10 +88,12 @@
     	    			<tr>
     	    				<td><textarea class="form-control" placeholder=" 내용" name="bbsContent" maxlength="2048" style="height: 350px;"></textarea></td>
     	    			</tr>
+    	    			<tr>
+					<td colspan="5" ><input type="file" name="fileName"></td>
+				</tr>
     	    		</tbody>
     		    </table>
-    	   		<input type="submit" href= "write.jsp" class= "btn btn-primary pull-right" value="게시글 작성">
-    	   		<input type="submit" href= "write.jsp" class= "btn btn-primary pull-right" value="업로드 파일 선택">
+    	   		<input type="submit" href= "fileSelect.jsp" class= "btn btn-primary pull-right" value="게시글 작성">
     		</form>
     	</div>
     </div>

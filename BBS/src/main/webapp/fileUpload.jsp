@@ -8,7 +8,7 @@
 <%
 	String realFolder = "";
 
-	String saveFolder = "images"; // out폴더에 fileSave 폴더 생성
+	String saveFolder = "bbsUpload"; // out폴더에 fileSave 폴더 생성
 	String encType = "utf-8";
 	int maxSize = 5*1024*1024; // 최대 업로드 5mb
 

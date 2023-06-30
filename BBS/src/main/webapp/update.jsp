@@ -69,6 +69,7 @@
                     aria-haspopup="true"
                     aria-expanded="false">회원관리<span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="profileUpdate.jsp">프로필 수정</a></li>
                         <li><a href="logoutAction.jsp">로그아웃</a></li>
                     </ul>
                 </li>
@@ -77,7 +78,7 @@
     </nav>
     <div class= "container">
     	<div class= "row">
-    		<form method="post" action="updateAction.jsp?bbsID=<%= bbsID%>">
+    		<form name="form" method="post" action="writeAction.jsp" encType="multipart/form-data&keyvalue=multipart">
     			<table class= "table table-stripped" style= "text-align: center; boarder: 1px solid #dddddd">
 	    	    	<thead>
 		    	    	<tr>
@@ -91,6 +92,9 @@
 			    		<tr>
 			    			<td><textarea class="form-control" placeholder="글 내용"  name="bbsContent" maxlength="2048" style= "height:350px"><%= bbs.getBbsContent()%></textarea></td>
 			    		</tr>
+			    		<tr>
+					<td colspan="5" ><input type="file" name="fileName"></td>
+				</tr>
 			    	</tbody>
     	    	</table>
     	    	<input type="submit" class="btn btn-primary pull-right" value="글수정">
