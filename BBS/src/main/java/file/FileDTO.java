@@ -1,5 +1,3 @@
-FileDTO.java
-
 package file;
 
 public class FileDTO {
